@@ -1,0 +1,13 @@
+FROM postgres:17-alpine
+
+ENV POSTGRES_DB=interview_lab
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_PASSWORD=postgres
+
+COPY init/ /docker-entrypoint-initdb.d/
+COPY init/ .
+COPY exercises.sql .
+COPY answers.sql .
+
+
+EXPOSE 5432
