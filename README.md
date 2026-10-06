@@ -12,9 +12,24 @@ docker exec -it postgres_interview_lab \
 ```
 
 ```bash
+
+\l or \l+
+
+\c
+
 \dt
 
 exercises.sql
+
+psql -U user_name -d database_name -f file.sql
+
+docker exec -it postgres_interview_lab \
+  psql -U postgres -d interview_lab  -f file.sql
+
+psql -U postgres -d my_database -f /path/to/setup.sql
+
+\i /path/to/setup.sql
+
 ```
 
 Requirements
